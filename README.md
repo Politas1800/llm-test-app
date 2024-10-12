@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+# LLM Test App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+
+LLM Test App is a React application that allows users to create, run, and publish tests for Language Models (LLMs). The application uses Chakra UI for styling and Axios for API requests.
+
+## Installation Instructions
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Politas1800/llm-test-app.git
+   cd llm-test-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm start
+   ```
 
 ## Available Scripts
 
@@ -39,32 +61,61 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project structure is as follows:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `public/`: Contains static files like `public/index.html` and `public/manifest.json`
+- `src/`: Contains the main application code, including components, styles, and configuration files
 
-### Code Splitting
+## Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The project uses the following configuration files and environment variables:
 
-### Analyzing the Bundle Size
+- `src/config.js`: Contains the backend API URL and other configuration variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+To use the application, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Register a new user
+2. Log in with the registered user
+3. Navigate through the application:
+   - Access the admin dashboard
+   - Create tests
+   - View tests
 
-### Advanced Configuration
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The application uses the following API endpoints:
 
-### Deployment
+- `POST /register`: Register a new user
+- `POST /token`: Log in and obtain a token
+- `GET /users/me`: Get the current user's information
+- `GET /users`: Get a list of all users (admin only)
+- `PUT /users/:userId/role`: Update a user's role (admin only)
+- `POST /tests/create`: Create a new test
+- `GET /tests`: Get a list of all tests
+- `GET /tests/published`: Get a list of published tests
+- `GET /tests/:testId`: Get a specific test by ID
+- `POST /tests/:testId/publish`: Publish a test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+To contribute to the project, follow these guidelines:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Submit issues and feature requests through the GitHub issue tracker
+2. Create pull requests for bug fixes and new features
+3. Follow the coding standards and guidelines
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+This project uses the following libraries and tools:
+
+- [React](https://reactjs.org/)
+- [Chakra UI](https://chakra-ui.com/)
+- [Axios](https://axios-http.com/)
