@@ -24,6 +24,53 @@ To set up the project locally, follow these steps:
    npm start
    ```
 
+## Troubleshooting
+
+If you encounter the error `npm error code ENOTEMPTY`, follow these steps:
+
+### Clear the `node_modules` directory
+
+1. Delete the `node_modules` directory manually or by running the command:
+   ```bash
+   rm -rf node_modules
+   ```
+2. Run the `npm install` command again:
+   ```bash
+   npm install
+   ```
+
+### Clear the npm cache
+
+1. Clear the npm cache by running the following command:
+   ```bash
+   npm cache clean --force
+   ```
+2. Delete the `node_modules` directory manually or by running the command:
+   ```bash
+   rm -rf node_modules
+   ```
+3. Run the `npm install` command again:
+   ```bash
+   npm install
+   ```
+
+### Use a different package manager
+
+If the issue persists, you can try using a different package manager like Yarn:
+
+1. Install Yarn if you haven't already:
+   ```bash
+   npm install -g yarn
+   ```
+2. Delete the `node_modules` directory manually or by running the command:
+   ```bash
+   rm -rf node_modules
+   ```
+3. Install dependencies using Yarn:
+   ```bash
+   yarn install
+   ```
+
 ## Available Scripts
 
 In the project directory, you can run:
